@@ -1,20 +1,22 @@
-// src/pages/Marais.js
 import React from 'react';
-import Header from '../components/Header';
+import Layout from '../components/Layout';
 
 const Marais = () => {
   return (
-    <div>
-      <Header />
-      <h1>Marais</h1>
-      <p>Un habitat humide où vivent diverses espèces aquatiques.</p>
-      <h3>Animaux :</h3>
-      <ul>
-        <li>Crocodile</li>
-        <li>Flammand rose</li>
-        <li>Castor</li>
-      </ul>
-    </div>
+    <Layout>
+      <div className="bg-green-100 p-6 rounded-lg shadow-lg">
+        <h1 className="text-3xl font-bold text-center text-green-700">Marais</h1>
+        <p className="mt-4 text-center">
+          Un habitat humide où vivent diverses espèces aquatiques.
+        </p>
+        <h3 className="mt-6 text-2xl font-semibold text-green-600">Animaux :</h3>
+        <ul className="mt-2 space-y-2 text-gray-700 text-center">
+          <li>Crocodile</li>
+          <li>Flamant rose</li>
+          <li>Castor</li>
+        </ul>
+      </div>
+    </Layout>
   );
 };
 

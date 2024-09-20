@@ -1,35 +1,30 @@
 // src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
 import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
 import HabitatsPage from './pages/HabitatsPage';
-import Marais from './pages/Marais';
-import Jungle from './pages/Jungle';
-import Savane from './pages/Savane';
-import AvisPage from './pages/AvisPage';
 import ContactPage from './pages/ContactPage';
 import ConnexionPage from './pages/ConnexionPage';
-import Header from './components/Header';
+import AnimalsPage from './pages/AnimalsPage'; // Importer la page des animaux
 
-function App() {
+const App = () => {
   return (
     <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/services" element={<ServicesPage />} />
-        <Route path="/habitats" element={<HabitatsPage />} />
-        <Route path="/habitats/marais" element={<Marais />} />
-        <Route path="/habitats/jungle" element={<Jungle />} />
-        <Route path="/habitats/savane" element={<Savane />} />
-        <Route path="/avis" element={<AvisPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/connexion" element={<ConnexionPage />} />
-      </Routes>
+      <Header /> {/* Ajout du Header ici */}
+      <main className="container mx-auto px-4">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/habitats" element={<HabitatsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/connexion" element={<ConnexionPage />} />
+          <Route path="/animaux" element={<AnimalsPage />} /> {/* Route pour les animaux */}
+        </Routes>
+      </main>
     </Router>
   );
 }
 
 export default App;
-

@@ -3,20 +3,36 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <header>
+    <header className="bg-brown-700 p-4"> {/* Couleur de fond brun foncé */}
       <nav>
-        <ul>
-          <li><Link to="/">Accueil</Link></li>
-          <li><Link to="/services">Services</Link></li>
-          <li><Link to="/habitats">Habitats</Link></li> {/* Corrigé ici */}
-          <li><Link to="/contact">Contact</Link></li>
-          <li><Link to="/connexion">Connexion</Link></li>
+        <ul className="flex space-x-8 justify-center">
+          <li>
+            <Link to="/" className="text-white hover:text-gray-200">
+              Accueil
+            </Link>
+          </li>
+          <li>
+            <Link to="/services" className="text-white hover:text-gray-200">
+              Services
+            </Link>
+          </li>
+          <li>
+            <Link to="/habitats" className="text-white hover:text-gray-200">
+              Habitats
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" className="text-white hover:text-gray-200">
+              Contact
+            </Link>
+          </li>
+          <li>
+            <Link to="/connexion" className="text-white hover:text-gray-200">
+              Connexion
+            </Link>
+          </li>
         </ul>
       </nav>
-      {/* Optionnel: Ajouter un bouton de retour au menu */}
-      <div className="header-menu-return">
-        <Link to="/">Retour au Menu</Link>
-      </div>
     </header>
   );
 }
